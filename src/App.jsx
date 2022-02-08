@@ -21,14 +21,16 @@ function App(props) {
   }, [])
 
   return (
-    <div className="App">
-      <h1>NASA | Astronomy Photo of the Day</h1>
-      <input type="date" value={day} onChange={ e => setDay(e.target.value)} />
-      <button onClick={getData}>Search</button>
-      <div>
-        <h1><strong>{data.title}</strong></h1>
-        <p><strong>About: </strong>{data.explanation}</p>
-        <img src={data.url} />
+    <div className='container'>
+      <div className="glassmorphism-light-1">
+        <h1 className='H1'>NASA | Astronomy Photo of the Day</h1>
+        <input className='input' type="date" value={day} onChange={ e => setDay(e.target.value)} />
+        <button onClick={getData}>Search</button>
+        <div>
+          <img className='image' src={data.url} />
+          <h2 className='H2'><strong>{data.title}</strong></h2>
+          <p className='p'>{data.explanation}</p>
+        </div>
       </div>
     </div>
   );
